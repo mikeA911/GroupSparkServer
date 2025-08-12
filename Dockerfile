@@ -12,8 +12,7 @@ RUN npm ci --only=production --no-audit --no-fund
 
 # Copy server source code only
 COPY src/ ./src/
-COPY public/ ./public/ 
-COPY views/ ./views/
+COPY public/ ./public/
 
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs
