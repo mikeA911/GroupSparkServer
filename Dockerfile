@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install production dependencies with npm (NOT deno)
-RUN npm ci --only=production --no-audit --no-fund
+RUN npm install --omit=dev --no-audit --no-fund
 
 # Copy server source code only
 COPY src/ ./src/
