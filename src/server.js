@@ -61,6 +61,11 @@ app.use('/admin', adminRoutes);
 app.use('/distributor', distributorRoutes);
 app.use('/', webRoutes);
 
+// Favicon endpoint
+app.get('/favicon.ico', (req, res) => {
+  res.status(204).end();
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ 
